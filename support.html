@@ -7,16 +7,18 @@
 	<link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/skeleton.css">
 	<link rel="stylesheet" href="css/layout.css">
-
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="js/jquery.mobilemenu.js"></script>
+	<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script>
 		$(document).ready(function(){
 			$('#responsive-menu').mobileMenu();
+            $('#responsive-menu').tooltip();
 		});
 	</script>
 </head>
@@ -28,11 +30,11 @@
 		
 		<nav class="thirteen columns">
 			<ul id="responsive-menu">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="aboutus.html">About Us</a></li>
-				<li><a href="solutions.html">Solutions</a></li>
-				<li><a href="support.html">Support</a></li>
-				<li><a href="contactus.html">Contact Us</a></li>
+				<li><a href="index.html" title="Introduction of company,explaining about their work culture and experience">Home</a></li>
+				<li><a href="aboutus.html" title="It provides details about directors of respective teams">About Us</a></li>
+				<li><a href="solutions.html" title="Vecta corp. offers 3 solutions for prospecting,converting and retaining customers">Solutions</a></li>
+				<li><a href="support.html" title="Email support for any queries">Support</a></li>
+				<li><a href="contactus.html" title="Sales Representative help based on any queries">Contact Us</a></li>
 			</ul>
 		</nav>
 		

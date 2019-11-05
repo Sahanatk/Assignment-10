@@ -7,16 +7,26 @@
 	<link rel="stylesheet" href="css/base.css">
 	<link rel="stylesheet" href="css/skeleton.css">
 	<link rel="stylesheet" href="css/layout.css">
-
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
 
 	<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="js/jquery.mobilemenu.js"></script>
+	<script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script>
 		$(document).ready(function(){
 			$('#responsive-menu').mobileMenu();
+            $('#responsive-menu').tooltip();
+            $('#Mac,#Linux,#Unix,#Windows').checkboxradio();
+            $('#vRetain,#vProspect,#vConvert').checkboxradio();
+            $('#size,#hearaboutus').selectmenu();
+            $( ".widget input[type=submit]").button();
+            $( ".widget input[type=submit]").click(function(event){
+                event.preventDefault();
+            });
+                                                
 		});
 	</script>
 </head>
@@ -28,11 +38,11 @@
 		
 		<nav class="thirteen columns">
 			<ul id="responsive-menu">
-				<li><a href="index.html">Home</a></li>
-				<li><a href="aboutus.html">About Us</a></li>
-				<li><a href="solutions.html">Solutions</a></li>
-				<li><a href="support.html">Support</a></li>
-				<li><a href="contactus.html">Contact Us</a></li>
+				<li><a href="index.html" title="Introduction of company,explaining about their work culture and experience">Home</a></li>
+				<li><a href="aboutus.html" title="It provides details about directors of respective teams">About Us</a></li>
+				<li><a href="solutions.html" title="Vecta corp. offers 3 solutions for prospecting,converting and retaining customers">Solutions</a></li>
+				<li><a href="support.html" title="Email support for any queries">Support</a></li>
+				<li><a href="contactus.html" title="Sales Representative help based on any queries">Contact Us</a></li>
 			</ul>
 		</nav>
 		
@@ -60,34 +70,34 @@
 			    <label for="vConvert"><input type="checkbox" name="product" value="vConvert" id="vConvert">vConvert 2.0</label>
 			    <label for="vRetain"><input type="checkbox" name="product" value="vRetain" id="vRetain">vRetain 1.0</label>
 			    
-			    <br>
+			    <br><br>
 			    What is your current infrastructure?<br>
 			    <label for="Mac"><input type="radio" name="infrastructure" value="Mac" id="Mac">Mac</label>
 			    <label for="Linux"><input type="radio" name="infrastructure" value="Linux" id="Linux">Linux</label>
 			    <label for="Unix"><input type="radio" name="infrastructure" value="Unix" id="Unix">Unix</label>
 			    <label for="Windows"><input type="radio" name="infrastructure" value="Windows" id="Windows">Windows</label>
 
-			    <br>
+			    <br><br>
 			    How many employees do you have?
-			    <select name="companysize">
+			    <select name="companysize" id = "size">
                     <option value="1-10">1-10</option>
                     <option value="11-100">11-100</option>
                     <option value="101-1000">101-1000</option>
                     <option value="More than 1000">More than 1000</option>
 		        </select>
-                
+                <br><br>
 			    How did you hear about us?
-			    <select name="hearaboutus" multiple="" size="5">
+			    <select name="hearaboutus" multiple="" size="5" id = "hearaboutus">
                     <option value="Magazine Ad">Magazine Ad</option>
                     <option value="Radio Ad">Radio Ad</option>
                     <option value="TV Ad">TV Ad</option>
                     <option value="Word of Mouth">Word of Mouth</option>
                     <option value="Other">Other</option>
 		        </select>
-                
+                <br><br>
 			    Questions or comments for our sales representatives?
 			    <textarea name="questions" size="30" rows="5"></textarea>
-			    <input type="submit" name="submit" value="Submit Now">
+			    <input class="ui-button ui-widget ui-corner-all" type="submit" name="submit" value="Submit Now">
 		    	</fieldset>
 			</form>
 	    </section>
